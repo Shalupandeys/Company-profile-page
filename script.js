@@ -59,6 +59,30 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
 }),
 
+
+//FAQ section
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all the "+" buttons
+  const plusButtons = document.querySelectorAll('.faq-header .open');
+
+  // Loop through each "+" button and add a click event listener
+  plusButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const content = this.closest('.faq-header').nextElementSibling; // Get the associated content (answer)
+      
+      // Toggle the content visibility and change the "+" to "-"
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";  // Show the content
+        this.textContent = "-";           // Change "+" to "-"
+      } else {
+        content.style.display = "none";   // Hide the content
+        this.textContent = "+";           // Change "-" back to "+"
+      }
+    });
+  });
+}),
+
+
 /* Initializing Swiper */
 let ;swiper = new swiper(".slider-wrapper", {
   loop: true,

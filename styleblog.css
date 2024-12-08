@@ -44,9 +44,9 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px; /* Increased spacing between links */
+  gap: 20px; /* Increased spacing between links */
   margin: 0;
-  padding: 0;
+  padding: 0px;
 }
 
 /* Individual navigation links */
@@ -56,9 +56,9 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 1.5rem; /* Increased font size for better readability */
+  font-size: 1.2rem; /* Increased font size for better readability */
   color: #0f0f0f; /* Orange text */
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 0.3s ease;
 }
 
