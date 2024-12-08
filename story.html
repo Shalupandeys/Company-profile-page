@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Creations and Solutions</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- Linking Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="story.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="image-container">
+        <img src="images/story.png" alt="Story">
+        <div class="text">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    <section id="story" class="bg-light py-3"></section>
+       <h1>Our Story</h1>
+       <br> 
+        <div class="process-wrapper">
+          <div id="progress-bar-container">
+	          <ul>
+		          <li class="step step01 active"><div class="step-inner">STARTUP</div></li>
+		          <li class="step step02"><div class="step-inner">BEGINNING</div></li>
+		          <li class="step step03"><div class="step-inner">AWAKENING</div></li>
+		          <li class="step step04"><div class="step-inner">EVOLUTION</div></li>
+		          <li class="step step05"><div class="step-inner">LEGACY</div></li>
+	          </ul>
+	        <div id="line">
+		    <div id="line-progress"></div>
+	    </div>
+    </div>
+
+    <div id="progress-content-section">
+	    <div class="section-content discovery active">
+		    <h2>STARTUP</h2>
+		      <p>Dev Creations and Solutions was founded by Mr. Devraj, a visionary who turned personal challenges into opportunities. As the president of the Mars Forum Committee at REVA University, he faced hurdles in designing and printing for college events, inspiring him to master the process. His passion for solving real-world problems led to the creation of a startup dedicated to providing high-quality, affordable design and merchandise solutions. Today, the company thrives on its core values of creativity, grit, and client satisfaction. Dev Creations and Solutions continues to empower others with innovative services rooted in its founder's journey.</p>
+	    </div>
+	
+	    <div class="section-content strategy">
+		    <h2>BEGINNING</h2>
+		      <p>The story of Dev Creations and Solutions begins with a dreamer—Mr. Devraj, a student who found himself overwhelmed by the challenges of creating posters and merchandise for college events. As the president of the Mars Forum Committee at REVA University, he was tasked with a role that exposed him to the realities of time and cost management. Organizing events and fests was exhilarating, but the frustration of delays, rising costs, and complex designs quickly turned that excitement into a test of endurance. For a student, each setback felt like a mountain to climb.</p>
+	    </div>
+	
+	    <div class="section-content creative">
+		    <h2>AWAKENING</h2>
+		      <p>During this time, Mr. Devraj realized something profound: inefficiencies and high costs weren't just obstacles - there were opertunities to be solved. Rather than being discouraged by the challenges, he became determined to master the design and printing process. Long nights were spent perfecting designs, reaching out to vendors, negotiating prices and figuring out to make quality merchandise more accesssible. </p>
+	    </div>
+	
+	    <div class="section-content production">
+		    <h2>EVOLUTION</h2>
+		      <p>These experiences taught him more than just business - they instilled grit, creativity and a passion for solving real problems. What started as a personal journey blossomed into Dev Creations and Solutions, a startup that now helps countless clients overcome the same challenges Mr. Devraj once faced. From design and printing to merchandise creation, the company was built on deep understanding of what it means to need quality work at a fair price.</p>
+	    </div>
+	
+	    <div class="section-content analysis">
+		    <h2>LEGACY</h2>
+		      <p>Today, as the business grow, Mr. Devraj never forgets where it all began: with a students desire to improve things, no matter the obstacles. With every project Dev Creations and Solutions stays true to the mission - providing not only exceptional services but also a helping hand to those who need ot most.</p>
+	    </div>
+	  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    
+    $(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "3%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click( function() {
+	$("#line-progress").css("width", "100%");
+	$(".analysis").addClass("active").siblings().removeClass("active");
+});
+</script>
+  </body>
+</html>
