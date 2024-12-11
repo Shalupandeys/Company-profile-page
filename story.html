@@ -1,101 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev Creations and Solutions</title>
-    <!-- Linking Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <!-- Linking Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="story.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-  </head>
-  <body>
-
-    <div class="image-container">
-        <img src="images/story.png" alt="Story">
-        <div class="text">
-            <a href="index.html">Home</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dev Creations and Solutions</title>
+        <!-- Linking Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Linking Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="story.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <!-- Hero Banner Container -->
+    <section class="hero-banner">
+        <div class="overlay">
+            <h1>OUR STORY</h1>
         </div>
-    </div>
-    <section id="story" class="bg-light py-3"></section>
-       <h1>Our Story</h1>
-       <br> 
-        <div class="process-wrapper">
-          <div id="progress-bar-container">
-	          <ul>
-		          <li class="step step01 active"><div class="step-inner">STARTUP</div></li>
-		          <li class="step step02"><div class="step-inner">BEGINNING</div></li>
-		          <li class="step step03"><div class="step-inner">AWAKENING</div></li>
-		          <li class="step step04"><div class="step-inner">EVOLUTION</div></li>
-		          <li class="step step05"><div class="step-inner">LEGACY</div></li>
-	          </ul>
-	        <div id="line">
-		    <div id="line-progress"></div>
-	    </div>
-    </div>
+    </section>
 
-    <div id="progress-content-section">
-	    <div class="section-content discovery active">
-		    <h2>STARTUP</h2>
-		      <p>Dev Creations and Solutions was founded by Mr. Devraj, a visionary who turned personal challenges into opportunities. As the president of the Mars Forum Committee at REVA University, he faced hurdles in designing and printing for college events, inspiring him to master the process. His passion for solving real-world problems led to the creation of a startup dedicated to providing high-quality, affordable design and merchandise solutions. Today, the company thrives on its core values of creativity, grit, and client satisfaction. Dev Creations and Solutions continues to empower others with innovative services rooted in its founder's journey.</p>
-	    </div>
-	
-	    <div class="section-content strategy">
-		    <h2>BEGINNING</h2>
-		      <p>The story of Dev Creations and Solutions begins with a dreamer—Mr. Devraj, a student who found himself overwhelmed by the challenges of creating posters and merchandise for college events. As the president of the Mars Forum Committee at REVA University, he was tasked with a role that exposed him to the realities of time and cost management. Organizing events and fests was exhilarating, but the frustration of delays, rising costs, and complex designs quickly turned that excitement into a test of endurance. For a student, each setback felt like a mountain to climb.</p>
-	    </div>
-	
-	    <div class="section-content creative">
-		    <h2>AWAKENING</h2>
-		      <p>During this time, Mr. Devraj realized something profound: inefficiencies and high costs weren't just obstacles - there were opertunities to be solved. Rather than being discouraged by the challenges, he became determined to master the design and printing process. Long nights were spent perfecting designs, reaching out to vendors, negotiating prices and figuring out to make quality merchandise more accesssible. </p>
-	    </div>
-	
-	    <div class="section-content production">
-		    <h2>EVOLUTION</h2>
-		      <p>These experiences taught him more than just business - they instilled grit, creativity and a passion for solving real problems. What started as a personal journey blossomed into Dev Creations and Solutions, a startup that now helps countless clients overcome the same challenges Mr. Devraj once faced. From design and printing to merchandise creation, the company was built on deep understanding of what it means to need quality work at a fair price.</p>
-	    </div>
-	
-	    <div class="section-content analysis">
-		    <h2>LEGACY</h2>
-		      <p>Today, as the business grow, Mr. Devraj never forgets where it all began: with a students desire to improve things, no matter the obstacles. With every project Dev Creations and Solutions stays true to the mission - providing not only exceptional services but also a helping hand to those who need ot most.</p>
-	    </div>
-	  </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script>
-    
-    $(".step").click( function() {
-	$(this).addClass("active").prevAll().addClass("active");
-	$(this).nextAll().removeClass("active");
-});
+        <div id="loader">
+            <div class="center">
+                <div class="one"></div>
+            </div>
+        </div>
 
-$(".step01").click( function() {
-	$("#line-progress").css("width", "3%");
-	$(".discovery").addClass("active").siblings().removeClass("active");
-});
+        <div id="wrap" class="home">
+            <div id="content">
+                <section class="process" id="story">
+                    <div class="container">
+                        <div class="start">
+                            <ul class="row">
+                                <li>
+                                    <div class="left">
+                                        <div class="icon animate fadeInLeft" data-wow-delay="1s">
+                                            <img src="images/idea.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>STARTUP :</h4>
+                                        <p>
+                                            Dev Creations and Solutions was founded by Mr. Devaraj, a visionary who turned personal challenges into opportunities. As the president of the Mars Forum Committee at REVA University, he faced hurdles in designing and printing for college events, inspiring him to master the process. His passion for solving real-world problems led to the creation of a startup dedicated to providing high-quality, affordable design and merchandise solutions. Today, the company thrives on its core values of creativity, grit, and client satisfaction. Dev Creations and Solutions continues to empower others with innovative services rooted in its founder's journey.
+                                        </p>
+                                    </div>
+                                </li>
 
-$(".step02").click( function() {
-	$("#line-progress").css("width", "25%");
-	$(".strategy").addClass("active").siblings().removeClass("active");
-});
+                                <li>
+                                    <div class="left two">
+                                        <div class="icon animate fadeInLeft" data-wow-delay="0.9s">
+                                            <img src="images/rocket.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>BEGINNING :</h4>
+                                        <p>
+                                            The story of Dev Creations and Solutions begins with a dreamer—Mr. Devaraj, a student who found himself overwhelmed by the challenges of creating posters and merchandise for college events. As the president of the Mars Forum Committee at REVA University, he was tasked with a role that exposed him to the realities of time and cost management. Organizing events and fests was exhilarating, but the frustration of delays, rising costs, and complex designs quickly turned that excitement into a test of endurance. For a student, each setback felt like a mountain to climb.
+                                        </p>
+                                    </div>
+                                </li>
 
-$(".step03").click( function() {
-	$("#line-progress").css("width", "50%");
-	$(".creative").addClass("active").siblings().removeClass("active");
-});
+                                <li>
+                                    <div class="left three">
+                                        <div class="icon animate fadeInLeft" data-wow-delay="0.9s">
+                                            <img src="images/bell.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>AWAKENING :</h4>
+                                        <p>
+                                            During this time, Mr. Devaraj realized something profound: inefficiencies and high costs weren't just obstacles - there were opertunities to be solved. Rather than being discouraged by the challenges, he became determined to master the design and printing process. Long nights were spent perfecting designs, reaching out to vendors, negotiating prices and figuring out to make quality merchandise more accesssible.
+                                        </p>
+                                    </div>
+                                </li>
 
-$(".step04").click( function() {
-	$("#line-progress").css("width", "75%");
-	$(".production").addClass("active").siblings().removeClass("active");
-});
+                                <li>
+                                    <div class="left four">
+                                        <div class="icon animate fadeInLeft" data-wow-delay="0.9s">
+                                            <img src="images/rising.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>EVOLUTION :</h4>
+                                        <p>
+                                            These experiences taught him more than just business - they instilled grit, creativity and a passion for solving real problems. What started as a personal journey blossomed into Dev Creations and Solutions, a startup that now helps countless clients overcome the same challenges Mr. Devaraj once faced. From design and printing to merchandise creation, the company was built on deep understanding of what it means to need quality work at a fair price.
+                                        </p>
+                                    </div>
+                                </li>
 
-$(".step05").click( function() {
-	$("#line-progress").css("width", "100%");
-	$(".analysis").addClass("active").siblings().removeClass("active");
-});
-</script>
-  </body>
+                                <li>
+                                    <div class="left five">
+                                        <div class="icon animate fadeInLeft" data-wow-delay="0.9s">
+                                            <img src="images/legacy.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>LEGACY :</h4>
+                                        <p>
+                                            Today, as the business grow, Mr. Devaraj never forgets where it all began: with a students desire to improve things, no matter the obstacles. With every project Dev Creations and Solutions stays true to the mission - providing not only exceptional services but also a helping hand to those who need ot most.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="wow.min.js"></script>
+
+
+        <script>
+            jQuery(document).ready(function($){
+                "use strict"
+                $("#loader").delay(1000).fadeOut("slow");
+
+                var wow= new WOW({
+                    boxClass:'animate',
+                    animateClass:'animated',
+                    offset:90,
+                    mobile:false
+                });
+                wow.init();
+            });
+        </script>
+
+                    <!-- WhatsApp Floating Icon -->
+     <a href="https://wa.me/+919945250080" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i></a>
+
+		<!-- Footer section -->
+		<footer class="footer" style="font-family:Arial, sans-serif;">
+            <div class="footer-container">
+                <div class="footer-section about-section">
+                    <h4>About Us</h4>
+                    <p>
+                        We provide affordable, high-quality design, printing, and merchandise solutions tailored to meet the dynamic needs of modern events and branding.  
+                    </p>
+                </div>
+        
+                <div class="footer-section contact-section">
+                  <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+918890576350" style="color: white; text-decoration: none;">+91 8890576350</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:devcreationsblr@gmail.com" style="color: white; text-decoration: none;">devcreationsblr@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>1st Phase, 88, K.R. Defence Colony, Cheemasandra, Bangalore,Karnataka 560049
+                    </p>
+                </div>
+        
+                <div class="footer-section links-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="#services">Our Services</a></li>
+                      <li><a href="indexblog.html">Blog</a></li>
+                      <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section map-section">
+                    <h4>Find Us</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.811943707544!2d77.7427291741216!3d13.047639213208539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0f6a591b8b0d%3A0xa50642f22dcdf97f!2sDev%20creations%20%26%20solutions!5e0!3m2!1sen!2sin!4v1733603822265!5m2!1sen!2sin"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dev Creations & Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
 </html>
